@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Shahreen Qasim Portfolio Stylesheet
+   File: css/style.css
+   ========================================================================== */
+
+/* Glass Navigation Bar */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+.dark .glass-nav {
+  background: rgba(11, 15, 25, 0.85);
+  border-bottom: 1px solid rgba(30, 41, 59, 0.8);
+}
+
+/* Active Nav Link */
+.nav-link.active {
+  background-color: #4f46e5;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px -2px rgba(79, 70, 229, 0.35);
+}
+.dark .nav-link.active {
+  background-color: #4f46e5;
+  color: #ffffff !important;
+}
+
+/* Glass Bento Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.dark .glass-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle Hover Lift for interactive cards */
+.glass-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 35px -8px rgba(79, 70, 229, 0.12);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+/* Code Window Styling */
+.code-window {
+  background: #0f172a;
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  border-radius: 1.25rem;
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.22s ease-out forwards;
+}
+
+/* Scroll Reveal Transition */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Grid Background Pattern */
+.hero-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+}
